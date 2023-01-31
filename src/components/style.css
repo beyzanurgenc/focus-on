@@ -1,0 +1,14 @@
+.app-button {
+    background-color: blueviolet;
+    border-color: blueviolet;
+}
+
+.app-button:hover {
+    background-color: rgb(174, 93, 250);
+    border-color: rgb(174, 93, 250);
+}
+
+.app-button:active {
+    background-color: rgb(174, 93, 250) !important;
+    border-color: rgb(174, 93, 250) !important;
+}

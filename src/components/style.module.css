@@ -1,6 +1,12 @@
 main {
-    margin: 2rem auto;
+    margin: auto;
     text-align: center;
+}
+
+.app {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(229, 225, 230);
 }
 
 .header {
@@ -24,4 +30,9 @@ main {
 .list a.active {
     text-decoration: underline;
     color: rgb(178, 106, 214);
+    pointer-events: none;
+}
+
+.btn {
+    background-color: blueviolet;
 }

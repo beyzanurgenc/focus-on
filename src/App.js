@@ -7,7 +7,10 @@ import Test from './components/pages/home/Test';
 import Login from './components/pages/login/Login';
 import Signup from './components/pages/signup/Signup';
 import { getMockData } from './controllers/mockDataController';
+import classes from './components/style.module.css';
+import './components/style.css';
 
+//TODO: change css modules to default
 function App() {
 
   //children başında / varsa absolute path, yoksa parenta bağlı, relative path
@@ -32,7 +35,9 @@ function App() {
   ]);
 
   return (
-    <RouterProvider router={router} />
+    <div className={classes.app}>
+      <RouterProvider router={router} />
+    </div>
   );
 }
 

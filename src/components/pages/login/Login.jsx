@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from '../../../assets/gifs/animated-rabbit.gif';
-import { login } from '../../../controllers/userController';
+import { login, setToken } from '../../../controllers/userController';
 
 const Login = () => {
 
@@ -14,6 +14,7 @@ const Login = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         login(email, password).then((result) => {
+            setToken(result.user.accessToken);
             navigate('/');
         }).catch((error) => {
             console.log(error);

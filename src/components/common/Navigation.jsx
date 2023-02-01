@@ -1,8 +1,9 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { deleteToken } from "../../controllers/userController";
 import classes from '../style.module.css';
 
 const Navigation = () => {
-
+    const navigate = useNavigate();
     const isActiveCheck = (isActive) => {
         return isActive ? classes.active : undefined;
     }
@@ -28,6 +29,9 @@ const Navigation = () => {
                     </li>
                 </ul>
             </nav>
+            <div>
+                <button onClick={() => { deleteToken(); navigate("/login"); }}>Logout</button>
+            </div>
         </header>
     );
 }

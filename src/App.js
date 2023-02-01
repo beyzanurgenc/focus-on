@@ -6,9 +6,10 @@ import Root from './components/pages/home/Root';
 import Test from './components/pages/home/Test';
 import Login from './components/pages/login/Login';
 import Signup from './components/pages/signup/Signup';
-import { getMockData } from './controllers/mockDataController';
-import classes from './components/style.module.css';
 import './components/style.css';
+import classes from './components/style.module.css';
+import { getMockData } from './controllers/mockDataController';
+import { checkToken } from './controllers/userController';
 
 //TODO: change css modules to default
 function App() {
@@ -18,6 +19,7 @@ function App() {
     {
       path: '/',
       element: <Root />,
+      loader: () => { return checkToken(); },
       children: [
         {
           path: '/',

@@ -19,10 +19,8 @@ export const loginRequest = (email, password) => {
     return new Promise((resolve, reject) => {
         let signInPromise = signInWithEmailAndPassword(auth, email, password);
         signInPromise.then((userCredentials) => {
-            console.log(userCredentials);
             resolve(userCredentials);
         }).catch((error) => {
-            console.log(error);
             reject(error);
         });
     });

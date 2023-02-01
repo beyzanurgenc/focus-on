@@ -1,14 +1,29 @@
 .app-button {
-    background-color: blueviolet;
-    border-color: blueviolet;
+    background-color: blueviolet !important;
+    border-color: blueviolet !important;
 }
 
 .app-button:hover {
-    background-color: rgb(174, 93, 250);
-    border-color: rgb(174, 93, 250);
+    background-color: rgb(174, 93, 250) !important;
+    border-color: rgb(174, 93, 250) !important;
 }
 
 .app-button:active {
     background-color: rgb(174, 93, 250) !important;
     border-color: rgb(174, 93, 250) !important;
+}
+
+.header {
+    text-align: center;
+    background-color: transparent !important;
+}
+
+.header h2 {
+    font-size: 250%;
+    font-weight: bold;
+    color: rgb(96, 83, 107);
+}
+
+::placeholder {
+    color: rgb(96, 83, 107) !important;
 }

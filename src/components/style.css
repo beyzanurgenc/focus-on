@@ -27,3 +27,8 @@
 ::placeholder {
     color: rgb(96, 83, 107) !important;
 }
+
+.logout-btn {
+    color: pink !important;
+    border-color: pink !important;
+}

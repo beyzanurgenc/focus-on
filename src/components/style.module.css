@@ -27,9 +27,15 @@ main {
     color: lightpink;
 }
 
+.list a:hover {
+    text-decoration: none;
+    color: rgb(255, 211, 218);
+}
+
 .list a.active {
     text-decoration: underline;
-    color: rgb(178, 106, 214);
+    color: rgb(255, 211, 218);
+    font-weight: bold;
     pointer-events: none;
 }
 

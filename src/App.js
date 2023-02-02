@@ -22,12 +22,12 @@ function App() {
       loader: () => { return checkToken(); },
       children: [
         {
-          path: '/',
+          index: true,
           element: <Home />,
           loader: () => {
             return getMockData();
           }
-        }, //path: '/' yerine index: true da denebilirdi. Default child path.
+        },
         { path: '/test', element: <Test /> },
       ],
       errorElement: <OnError />

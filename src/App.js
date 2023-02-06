@@ -1,5 +1,6 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import PrivateRoute from './components/common/PrivateRoute';
 import OnError from './components/pages/error/OnError';
 import Home from './components/pages/home/Home';
 import Root from './components/pages/home/Root';
@@ -9,7 +10,6 @@ import Signup from './components/pages/signup/Signup';
 import './components/style.css';
 import classes from './components/style.module.css';
 import { getMockData } from './controllers/mockDataController';
-import { checkToken } from './controllers/userController';
 
 //TODO: change css modules to default
 function App() {
@@ -18,8 +18,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Root />,
-      loader: () => { return checkToken(); },
+      element: <PrivateRoute><Root /></PrivateRoute>,
       children: [
         {
           index: true,

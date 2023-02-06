@@ -1,7 +1,7 @@
 import { NavLink, useNavigate } from "react-router-dom";
+import navbarIcon from '../../assets/icons/navbar_icon.png';
 import { deleteToken } from "../../controllers/userController";
 import classes from '../style.module.css';
-import navbarIcon from '../../assets/icons/navbar_icon.png';
 
 const Navigation = () => {
     const navigate = useNavigate();
@@ -10,10 +10,10 @@ const Navigation = () => {
     }
 
     return (
-        <nav class="navbar navbar-expand-lg navbar-dark p-3 bg-danger">
-            <div class="container-fluid">
-                <div class=" collapse navbar-collapse">
-                    <li class="nav-item">
+        <nav className="navbar navbar-expand-lg navbar-dark p-3 bg-danger">
+            <div className="container-fluid">
+                <div className=" collapse navbar-collapse">
+                    <li className="nav-item">
                         <NavLink
                             to="/"
                             end="/"
@@ -21,8 +21,8 @@ const Navigation = () => {
                             <img src={navbarIcon} alt="loading..." height="50" />
                         </NavLink>
                     </li>
-                    <ul class={"navbar-nav mx-auto " + classes.list}>
-                        <li class="nav-item">
+                    <ul className={"navbar-nav mx-auto " + classes.list}>
+                        <li className="nav-item">
                             <NavLink
                                 to="/"
                                 end="/"
@@ -30,7 +30,7 @@ const Navigation = () => {
                                 Home
                             </NavLink>
                         </li>
-                        <li class="nav-item">
+                        <li className="nav-item">
                             <NavLink
                                 to="/test"
                                 className={({ isActive }) => isActiveCheck(isActive)}>

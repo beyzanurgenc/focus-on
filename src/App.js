@@ -4,7 +4,8 @@ import PrivateRoute from './components/common/PrivateRoute';
 import OnError from './components/pages/error/OnError';
 import Home from './components/pages/home/Home';
 import Root from './components/pages/home/Root';
-import Test from './components/pages/home/Test';
+import SafePlace from './components/pages/home/SafePlace';
+import SafePlaceDetail from './components/pages/home/SafePlaceDetail';
 import Login from './components/pages/login/Login';
 import Signup from './components/pages/signup/Signup';
 import './components/style.css';
@@ -27,7 +28,8 @@ function App() {
             return getMockData();
           }
         },
-        { path: '/test', element: <Test /> },
+        { path: '/safe', element: <SafePlace /> },
+        { path: '/safe/:id', element: <SafePlaceDetail /> }
       ],
       errorElement: <OnError />
     },

@@ -32,9 +32,9 @@ const Navigation = () => {
                         </li>
                         <li className="nav-item">
                             <NavLink
-                                to="/test"
+                                to="/safe"
                                 className={({ isActive }) => isActiveCheck(isActive)}>
-                                Test
+                                Safe Place
                             </NavLink>
                         </li>
                     </ul>

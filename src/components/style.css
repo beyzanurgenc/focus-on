@@ -32,3 +32,23 @@
     color: pink !important;
     border-color: pink !important;
 }
+
+.link {
+    text-decoration: none;
+    color: rgb(253, 147, 163);
+}
+
+.link:hover {
+    text-decoration: none;
+    color: rgb(255, 193, 204);
+}
+
+.youtube-frame {
+    margin-top: 1%;
+}
+
+.headline {
+    font-style: italic;
+    font-size: xx-large;
+    color: rgb(253, 147, 163);
+}

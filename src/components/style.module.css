@@ -1,6 +1,11 @@
 main {
     margin: auto;
     text-align: center;
+    height: 92%;
+}
+
+nav {
+    height: 8%;
 }
 
 .app {
